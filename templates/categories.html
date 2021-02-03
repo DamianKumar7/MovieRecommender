@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./categories.css" rel="stylesheet">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <title>genres</title>
+    <style>
+  @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800");
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body{
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 1.7;
+        color: #fff;
+        background-color: #1f2029;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+       
+}
+header {
+    background-color: #1f2029;  /*added background color to navbar*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 20px 100px; /*changed the padding to give better design*/
+    z-index: 100000;
+    
+}
+header .logo {
+          position: relative;
+          font-weight: 700;
+          color: #fff;
+          text-decoration: none;
+          font-size: 2em;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          transition: 0.6s;
+        }
+      
+        header .logo:hover{
+          color: aquamarine;   /*added color change on hover*/
+        }
+        
+        header ul {
+            position: relative;
+            /* right: 380px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 24%;
+        }
+        header ul li {
+          position: relative;
+          list-style: none;
+        }
+        
+        header ul li a {
+          position: relative;
+          margin: 0 15px;
+          text-decoration: none;
+          color: #fff;
+          letter-spacing: 2px;
+          font-weight: 500;
+        }
+        
+        header ul li a:hover{
+          color: aquamarine;           /*added color change on hover*/
+        }
+.nav_links{
+    list-style: none;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+
+}
+
+.nav_links li a{
+    transition: 0.3s ease 0s;
+    color: aliceblue;
+    text-decoration: none;
+
+}
+
+* {
+    list-style: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+.btn {
+    position: absolute;
+    margin: 0px 20px;
+    z-index: 10;
+    border: 0px;
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    background: rgba(255,255,255,1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #000;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+.next {
+    right: 0px;
+}
+.con-slide {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    left: 0px;
+    position: relative;
+}
+/* .con-images {
+} */
+.con-img {
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.con-img .con-text {
+    font-size: 3rem;
+    color: #fff;
+    background: #1f2029;
+    padding: 15px 50px;
+    transform: skew(20deg);
+    mix-blend-mode: multiply;
+    border-radius: 20px;
+}
+con-img .con-text a {
+    font-size: 3rem;
+    color: #fff;
+    background: #1f2029;
+    padding: 15px 50px;
+    transform: skew(20deg);
+    mix-blend-mode: multiply;
+    border-radius: 20px;
+}
+.con-img .con-text:after {
+    content: '';
+    position: absolute;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    border-radius: inherit;
+    border: 4px solid #000;
+    top: -14px;
+    left: -14px;
+}
+.con-img .con-text h3 {
+    transform: skew(-20deg);
+    text-transform: uppercase;
+}
+.con-img-0 {
+    background-image: url('../movie_posters/about-time-slider.png');
+}
+.con-img-1 {
+    background-image: url('../movie_posters/john-wick-slider.png');
+}
+.con-img-2 {
+    background-image: url('../movie_posters/spidey-slider.png');
+}
+.con-img-3 {
+    background-image: url('../movie_posters/shutter_island_slider.png');
+}
+.con-img-4 {
+    background-image: url('../movie_posters/harry-silder.png');
+}
+.con-img-5 {
+    background-image: url('../movie_posters/godfather-slider.png');
+}
+.con-img-6 {
+    background-image: url('../movie_posters/drama-slider.png');
+}
+.con-img-7 {
+    background-image: url('../movie_posters/truman-slider.png');
+}
+.con-img img {
+    width: 100%;
+    min-height: 100vh;
+}
+
+#page-link{
+    color: aliceblue;
+    text-decoration: none;
+}
+.movie_card {
+    position: relative;
+    display: block;
+    width: 800px;
+    height: 350px;
+    margin: 100px auto;
+    margin-left: 12%;
+    overflow: hidden;
+    border-radius: 10px;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  .movie_card:hover {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  .movie_card .info_section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-blend-mode: multiply;
+    z-index: 2;
+    border-radius: 10px;
+  }
+  .movie_card .info_section .movie_header {
+    position: relative;
+    padding: 25px;
+    height: 40%;
+  }
+  .movie_card .info_section .movie_header h1 {
+    color: #fff;
+    font-weight: 400;
+  }
+  .movie_card .info_section .movie_header h4 {
+    color: #9ac7fa;
+    font-weight: 400;
+  }
+  .movie_card .info_section .movie_header .minutes {
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+  }
+  .movie_card .info_section .movie_header .type {
+    display: inline-block;
+    color: #cee4fd;
+    margin-left: 10px;
+  }
+  .movie_card .info_section .movie_header .locandina {
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    height: 120px;
+    box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
+  }
+  .movie_card .info_section .movie_desc {
+    padding: 25px;
+    height: 50%;
+  }
+  .movie_card .info_section .movie_desc .text {
+    color: #cfd6e1;
+  }
+  .movie_card .info_section .movie_social {
+    height: 10%;
+    padding-left: 15px;
+    padding-bottom: 20px;
+  }
+  .movie_card .info_section .movie_social ul {
+    list-style: none;
+    padding: 0;
+  }
+  .movie_card .info_section .movie_social ul li {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.4);
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+    -webkit-transition-delay: 0.15s;
+            transition-delay: 0.15s;
+    margin: 0 10px;
+  }
+  .movie_card .info_section .movie_social ul li:hover {
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .movie_card .info_section .movie_social ul li i {
+    font-size: 19px;
+    cursor: pointer;
+  }
+  .movie_card .blur_back {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    height: 100%;
+    right: 0;
+    background-size: cover;
+    border-radius: 11px;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .movie_header {
+      width: 60%;
+    }
+  
+    .movie_desc {
+      width: 50%;
+    }
+  
+    .info_section {
+      background: -webkit-gradient(linear, left top, right top, color-stop(50%, #0d0d0c), to(transparent));
+      background: linear-gradient(to right, #0d0d0c 50%, transparent 100%);
+    }
+  
+    .blur_back {
+      width: 80%;
+      background-position: -100% 10% !important;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .movie_card {
+      width: 95%;
+      margin: 70px auto;
+      min-height: 350px;
+      height: auto;
+    }
+  
+    .blur_back {
+      width: 100%;
+      background-position: 50% 50% !important;
+    }
+  
+    .movie_header {
+      width: 100%;
+      margin-top: 85px;
+    }
+  
+    .movie_desc {
+      width: 100%;
+    }
+  
+    .info_section {
+      background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #141413), to(transparent));
+      background: linear-gradient(to top, #141413 50%, transparent 100%);
+      display: inline-grid;
+    }
+  }
+  #bright {
+    box-shadow: 0px 0px 150px -45px rgba(255, 51, 0, 0.5);
+  }
+  #bright:hover {
+    box-shadow: 0px 0px 120px -55px rgba(255, 51, 0, 0.5);
+  }
+  
+  .bright_back {
+    background: url("../movie_posters/spidey_card.png");
+  }
+  
+  #tomb {
+    box-shadow: 0px 0px 150px -45px #610004;
+  }
+  #tomb:hover {
+    box-shadow: 0px 0px 120px -55px #610004;
+  }
+  
+  .tomb_back {
+    background: url("../movie_posters/john_cover.png");
+  }
+  
+  #ave {
+    box-shadow: 0px 0px 150px -45px rgba(199, 147, 75, 0.7);
+    margin-bottom: 200px;
+  }
+  #ave:hover {
+    box-shadow: 0px 0px 120px -55px rgba(199, 147, 75, 0.7);
+  }
+  
+  .ave_back {
+    background: url("../movie_posters/godfather_card.png");
+  }
+
+  #about_time{
+    box-shadow: 0px 0px 150px -45px #692246;
+    margin-bottom: 200px;
+  }
+  #about_time:hover{
+    box-shadow: 0px 0px 150px -45px #692246;
+    
+  }
+  .at_back{
+      background: url("../movie_posters/lala_cover.png");
+  }
+  #blade_runner{
+    box-shadow: 0px 0px 150px -45px #b80996;
+    margin-bottom: 200px;
+  }
+  #blade_runner:hover{
+    box-shadow: 0px 0px 150px -45px #b80996;
+  }
+
+  .bd_back{
+        background: url("../movie_posters/blade_cover.png");
+  }
+  
+  #harry{
+    box-shadow: 0px 0px 150px -45px #2d5f57;
+    margin-bottom: 200px;
+  }
+  #harry:hover{
+    box-shadow: 0px 0px 150px -45px #2d5f57;
+    
+  }
+  .hp_back{
+      background: url("../movie_posters/harry_cover.png");
+  }
+  #shutter{
+    box-shadow: 0px 0px 150px -45px rgba(19, 160, 134, 0.6);;
+    margin-bottom: 200px;
+  }
+  #shutter:hover{
+    box-shadow: 0px 0px 150px -45px rgba(19, 160, 134, 0.6);;
+  }
+
+  .si_back{
+      background: url("../movie_posters/shutter_cover.png");
+  }
+  #world{
+    box-shadow: 0px 0px 150px -45px #876951;
+    margin-bottom: 200px;
+  }
+  #world:hover{
+    box-shadow: 0px 0px 150px -45px #876951;
+  }
+  .we_back{
+      background: url("../movie_posters/world_cover.png");
+  }
+  #shame{
+    box-shadow: 0px 0px 150px -45px rgba(19, 160, 134, 0.6);;
+    margin-bottom: 200px;
+  }
+  #shame:hover{
+    box-shadow: 0px 0px 150px -45px rgba(19, 160, 134, 0.6);;
+    
+  }
+  .sh_back{
+    background: url("../movie_posters/drama_cover.png");
+  }
+    </style>
+</head>
+<body>
+    <header>
+        
+        <ul>
+          <li><a href="./">Home</a></li>
+          <li><a href="./browse.html">Browse Movies</a></li>
+          <li><a href="#">Genre</a></li>
+          <li><a href="./recommend.html">Recommend</a></li>
+          <li><a href="#">Portfolio</a></li>
+        </ul>
+         
+
+    </header>
+        <div class="con-slide">
+            <button class="prev btn">
+                <i class='bx bxs-chevron-left'></i>
+            </button>
+            <div class="con-images">
+                <div class="con-img active con-img-0">
+                    <div class="con-text">
+                        <h3><a id = "page-link"href="#">Romance</a>
+                            
+                        </h3>
+                    </div>
+                </div>
+                <div class="con-img con-img-1">
+                    <div class="con-text">
+                        <h3><a href = "./index.html" id="page-link">Action</a>
+                            
+                        </h3>
+                    </div>
+                </div>
+                <div class="con-img con-img-2">
+                    <div class="con-text">
+                        <h3><a href="#" id = "page-link"> Animated</a>
+                           
+                        </h3>
+                    </div>
+                </div>
+                <div class="con-img con-img-3">
+                    <div class="con-text">
+                        <h3><a href="#" id = "page-link">Thriller</a>
+                            
+                        </h3>
+                    </div>
+                </div>
+                <div class="con-img con-img-4">
+                    <div class="con-text">
+                        <h3>Fantasy
+                            
+                        </h3>
+                    </div>
+                </div>
+                <div class="con-img con-img-5">
+                    <div class="con-text">
+                        <h3>Crime
+                        </h3>
+                    </div>
+                </div>
+                <div class="con-img con-img-6">
+                    <div class="con-text">
+                        <h3>
+                           Drama
+                        </h3>
+                    </div>
+                </div>
+                <div class="con-img con-img-7">
+                    <div class="con-text">
+                        <h3>
+                            <a href="#" id = "page-link">Comedy</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <button class="next btn">
+                <i class='bx bxs-chevron-right' ></i>
+            </button>
+        </div>
+        <div class="movie_card" id="blade_runner">
+            <div class="info_section">
+              <div class="movie_header">
+                <img class="locandina" src="https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_SX300.jpg"/>
+                <h1>Sci-Fi</h1>
+                <h4>In Frame: Ryan Gosling</h4>
+                <span class="minutes">8/10</span>
+                <p class="type">Blade Runner:2049</p>
+              </div>
+              <div class="movie_desc">
+                <p class="text">
+                  Given below is our curated list of the best sci-fi films we havve watched and ofcourse we would want too recommend you 
+                </p>
+                <a href="./scifi.html" style="color: aliceblue; text-decoration: none;">click me</a>
+              </div>
+              <div class="movie_social">
+                <ul>
+                  <li><i class="material-icons">share</i></li>
+                  <li><i class="material-icons"></i></li>
+                  <li><i class="material-icons">chat_bubble</i></li>
+                </ul>
+              </div>
+            </div>
+            <div class="blur_back bd_back"></div>
+          </div>
+          <div class="movie_card" id="about_time">
+            <div class="info_section">
+              <div class="movie_header">
+                <img class="locandina" src="https://m.media-amazon.com/images/M/MV5BMzUzNDM2NzM2MV5BMl5BanBnXkFtZTgwNTM3NTg4OTE@._V1_SX300.jpg"/>
+                <h1>Romance</h1>
+                <h4>In Frame: Ryan Gosling,Emma Stone</h4>
+                <span class="minutes">8/10</span>
+                <p class="type">La La Land</p>
+              </div>
+              <div class="movie_desc">
+                <p class="text">
+                  Want to get that warm fuzzy feeling in your stomach?Wanna have a lump in your throat? Then you shouldnt miss these awesome romantic films handpicked for you
+                </p>
+                <a href="./romance.html" style="color: aliceblue; text-decoration: none;">click me</a>
+              </div>
+              <div class="movie_social">
+                <ul>
+                  <li><i class="material-icons">share</i></li>
+                  <li><i class="material-icons"></i></li>
+                  <li><i class="material-icons">chat_bubble</i></li>
+                </ul>
+              </div>
+            </div>
+            <div class="blur_back at_back"></div>
+          </div>
+        
+          
+          <div class="movie_card" id="tomb">
+            <div class="info_section">
+              <div class="movie_header">
+                <img class="locandina" src="https://m.media-amazon.com/images/M/MV5BMTU2NjA1ODgzMF5BMl5BanBnXkFtZTgwMTM2MTI4MjE@._V1_SX300.jpg"/>
+                <h1>Action</h1>
+                <h4>In Frame: Keanu Reeves</h4>
+                <span class="minutes">7.4/10</span>
+                <p class="type">John Wick</p>
+              </div>
+              <div class="movie_desc">
+                <p class="text">
+                  We hope you have a good stash of pop corn beacuse you just can't have enough of these action movies.Sit tight of an adrenaline pumping ride
+                </p>
+                <a href="./action.html" style="color: aliceblue; text-decoration: none;">click me</a>
+              </div>
+              <div class="movie_social">
+                <ul>
+                  <li><i class="material-icons">share</i></li>
+                  <li><i class="material-icons"></i></li>
+                  <li><i class="material-icons">chat_bubble</i></li>
+                </ul>
+              </div>
+            </div>
+            <div class="blur_back tomb_back"></div>
+          </div>
+          <div class="movie_card" id="bright">
+            <div class="info_section">
+              <div class="movie_header">
+                <img class="locandina" src="https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_SX300.jpg"/>
+                <h1>Animated</h1>
+                <h4>In Frame: Spidey</h4>
+                <span class="minutes">8.4/10</span>
+                <p class="type">Spiderman: Into the Spiderverse</p>
+              </div>
+              <div class="movie_desc">
+                <p class="text">
+                  Who said animated films are only for children. We promise these films will take you on one hell of a ride.
+                </p>
+                <a href="./animated.html" style="color: aliceblue; text-decoration: none;">click me</a>
+              </div>
+              <div class="movie_social">
+                <ul>
+                  <li><i class="material-icons">share</i></li>
+                  <li><i class="material-icons"></i></li>
+                  <li><i class="material-icons">chat_bubble</i></li>
+                </ul>
+              </div>
+            </div>
+            <div class="blur_back bright_back"></div>
+          </div>
+          
+          
+          <div class="movie_card" id="ave">
+            <div class="info_section">
+              <div class="movie_header">
+                <img class="locandina" src="https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"/>
+                <h1>Crime</h1>
+                <h4>In Frame: Marlon Brando</h4>
+                <span class="minutes">9.2/10</span>
+                <p class="type">The Godfather</p>
+              </div>
+              <div class="movie_desc">
+                <p class="text">
+                  Drugs, goon, mafia families, violence, betrayals ... excited yet? We bet you are  and we bring you some of the best crime movies out there 
+                </p>
+                <a href="./crime.html" style="color: aliceblue; text-decoration: none;">click me</a>
+              </div>
+              <div class="movie_social">
+                <ul>
+                  <li><i class="material-icons">share</i></li>
+                  <li><i class="material-icons"></i></li>
+                  <li><i class="material-icons">chat_bubble</i></li>
+                </ul>
+              </div>
+            </div>
+            <div class="blur_back ave_back"></div>
+          </div>
+          <div class="movie_card" id="world">
+            <div class="info_section">
+              <div class="movie_header">
+                <img class="locandina" src="https://m.media-amazon.com/images/M/MV5BNzA1MTk1MzY0OV5BMl5BanBnXkFtZTgwNjkzNTUwMDE@._V1_SX300.jpg"/>
+                <h1>Comedy</h1>
+                <h4>In Frame: Simon Pegg,Nick Frost</h4>
+                <span class="minutes">7/10</span>
+                <p class="type">The World's End</p>
+              </div>
+              <div class="movie_desc">
+                <p class="text">
+                  "To laugh is to live profoundly" ~ Milan Kundera. Yes we agree all the way, so herre are some films to make you laugh
+                </p>
+                <a href="./comedy.html" style="color: aliceblue; text-decoration: none;">click me</a>
+              </div>
+              <div class="movie_social">
+                <ul>
+                  <li><i class="material-icons">share</i></li>
+                  <li><i class="material-icons"></i></li>
+                  <li><i class="material-icons">chat_bubble</i></li>
+                </ul>
+              </div>
+            </div>
+            <div class="blur_back we_back"></div>
+          </div>
+          <div class="movie_card" id="shame">
+            <div class="info_section">
+              <div class="movie_header">
+                <img class="locandina" src="https://m.media-amazon.com/images/M/MV5BOGU4Mjc0ZWMtNGQ0OS00ZWQ4LThkNDUtOTE1Y2EzYjgzMDU5XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg"/>
+                <h1>Drama</h1>
+                <h4>In Frame: Michael Fassbender</h4>
+                <span class="minutes">7.2/10</span>
+                <p class="type">Shame</p>
+              </div>
+              <div class="movie_desc">
+                <p class="text">
+                  Can't have enough drama? Then these films are made for you!
+                </p>
+                <a href="./drama.html" style="color: aliceblue; text-decoration: none;">click me</a>
+              </div>
+              <div class="movie_social">
+                <ul>
+                  <li><i class="material-icons">share</i></li>
+                  <li><i class="material-icons"></i></li>
+                  <li><i class="material-icons">chat_bubble</i></li>
+                </ul>
+              </div>
+            </div>
+            <div class="blur_back sh_back"></div>
+          </div>
+
+          
+          
+          <div class="movie_card" id="harry">
+            <div class="info_section">
+              <div class="movie_header">
+                <img class="locandina" src="https://m.media-amazon.com/images/M/MV5BMjIyZGU4YzUtNDkzYi00ZDRhLTljYzctYTMxMDQ4M2E0Y2YxXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg"/>
+                <h1>Fantasy</h1>
+                <h4>In Frame: Ralph Fiennes</h4>
+                <span class="minutes">7.6/10</span>
+                <p class="type">Harry Potter </p>
+              </div>
+              <div class="movie_desc">
+                <p class="text">
+                  Dragons,mermaids,mages,witches,Ancient curses...get ready to step into the world of magic and fantasy with these out of the world films. 
+                </p>
+                <a href="./fantasy.html" style="color: aliceblue; text-decoration: none;">click me</a>
+              </div>
+              <div class="movie_social">
+                <ul>
+                  <li><i class="material-icons">share</i></li>
+                  <li><i class="material-icons"></i></li>
+                  <li><i class="material-icons">chat_bubble</i></li>
+                </ul>
+              </div>
+            </div>
+            <div class="blur_back hp_back"></div>
+          </div>
+          <div class="movie_card" id="shutter">
+            <div class="info_section">
+              <div class="movie_header">
+                <img class="locandina" src="https://m.media-amazon.com/images/M/MV5BYzhiNDkyNzktNTZmYS00ZTBkLTk2MDAtM2U0YjU1MzgxZjgzXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"/>
+                <h1>Thriler</h1>
+                <h4>In Frame: Leonardo Di Caprio</h4>
+                <span class="minutes">8.2/10</span>
+                <p class="type">Shutter Island</p>
+              </div>
+              <div class="movie_desc">
+                <p class="text">
+                  The truth is right there in the shadows, no one can be trusted. Can you crack the mystery before the film? Presenting some of the best edge of the seat thriler movies. 
+                </p>
+                <a href="./thriller.html" style="color: aliceblue; text-decoration: none;">click me</a>
+              </div>
+              <div class="movie_social">
+                <ul>
+                  <li><i class="material-icons">share</i></li>
+                  <li><i class="material-icons"></i></li>
+                  <li><i class="material-icons">chat_bubble</i></li>
+                </ul>
+              </div>
+            </div>
+            <div class="blur_back si_back"></div>
+          </div>
+         
+    
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.js" integrity="sha512-rBvJrSgappbpVQiWJabYgWL32JOqZbhh4cxtj3iWEKx7yVS/h6c2r4q4pwp5AIcF5yvCQzbo+GPwelUjfxaG7Q==" crossorigin="anonymous"></script>
+    <script>
+        const images = document.querySelectorAll('.con-img')
+        const prev = document.querySelector('.prev')
+        const next = document.querySelector('.next')
+        const w = window.innerWidth
+        let visible = 0
+
+    images.forEach((item, i) => {
+        if(i == 0) {
+            return
+        }
+        anime({
+            targets: item,
+            left: `${w}px`,
+            easing: 'easeInOutExpo',
+            duration: 500
+        });
+    })
+
+    next.addEventListener('click', () => {
+        if (visible + 1 == images.length) {
+            return
+        }
+        visible++
+        images[visible].classList.add('active')
+        anime({
+            targets: `.con-img-${visible - 1}`,
+            left: `-${w}px`,
+            easing: 'easeInOutExpo',
+            duration: 500
+        })
+        anime({
+            targets: `.con-img-${visible}`,
+            left: '0px',
+            easing: 'easeInOutExpo',
+            duration: 500
+        })
+    })
+    prev.addEventListener('click', () => {
+        if (visible <= 0) {
+            return
+        }
+        visible--
+        images[visible].classList.add('active')
+        anime({
+            targets: `.con-img-${visible + 1}`,
+            left: `${w}px`,
+            easing: 'easeInOutExpo',
+            duration: 500
+        })
+        anime({
+            targets: `.con-img-${visible}`,
+            left: '0px',
+            easing: 'easeInOutExpo',
+            duration: 500
+        })
+    })
+       
+    </script>
+
+</body>
+</html>

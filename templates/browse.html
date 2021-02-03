@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse</title>
+    <link href="./browse.css" rel="stylesheet">
+    <style>
+        
+@import url("https://fonts.googleapis.com/css?family=Lato:400,900");
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  padding: 12px;
+  min-height: 100vh;
+  font-family: "Lato", sans-serif;
+  background: #c31432;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+header {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1f2029;  /*added background color to navbar*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+    transition: 0.6s;
+    padding: 20px 100px; /*changed the padding to give better design*/
+    z-index: 100000;
+
+    box-shadow:rgba(0, 0, 1, 0.3) 0 30px 18px -12px;
+
+    
+}
+header .logo {
+          position: relative;
+          font-weight: 700;
+          color: #fff;
+          text-decoration: none;
+          font-size: 2em;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          transition: 0.6s;
+        }
+      
+        header .logo:hover{
+          color: aquamarine;   /*added color change on hover*/
+        }
+        
+        header ul {
+            position: relative;
+            /* right: 380px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 24%;
+        }
+        header ul li {
+          position: relative;
+          list-style: none;
+        }
+        
+        header ul li a {
+          position: relative;
+          margin: 0 15px;
+          text-decoration: none;
+          color: #fff;
+          letter-spacing: 2px;
+          font-weight: 500;
+        }
+        
+        header ul li a:hover{
+          color: aquamarine;           /*added color change on hover*/
+        }
+.nav_links{
+    list-style: none;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+
+}
+
+.nav_links li a{
+    transition: 0.3s ease 0s;
+    color: aliceblue;
+    text-decoration: none;
+
+}
+
+h1, h2, p, ul {
+  line-height: 1.2;
+}
+h1:not(:last-child), h2:not(:last-child), p:not(:last-child), ul:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+p, li {
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+p + ul {
+  margin-top: -10px;
+}
+
+h1, h2, strong {
+  font-weight: 900;
+}
+
+input {
+  padding: 6px;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  border: 1px solid gainsboro;
+  border-radius: 2px;
+  -webkit-appearance: none;
+}
+
+.list--inline li {
+  display: inline-block;
+}
+.list--inline li:not(:last-child) {
+  margin-right: 12px;
+}
+
+.movie {
+  position: relative;
+  overflow: hidden;
+  margin: 12px auto;
+  width: 100%;
+  color: aliceblue;
+  max-width: 800px;
+  background: #16222A;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  border-radius: 0.8em;
+  box-shadow: rgba(0, 0, 1, 0.5) 0 30px 18px -12px;
+}
+.movie__data {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+  min-height: 400px;
+}
+@media (min-width: 600px) {
+  .movie__data {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+  }
+}
+.movie__search {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  margin: auto;
+  width: calc(100% - (12px * 4));
+}
+@media (min-width: 400px) {
+  .movie__search {
+    max-width: 200px;
+  }
+}
+.movie__tags {
+  font-size: 0.75em;
+  color: darkgray;
+}
+.movie__poster {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  width: 100%;
+}
+@media (min-width: 600px) {
+  .movie__poster {
+    margin-right: 12px;
+    width: 200px;
+  }
+}
+.movie__poster--fill {
+  position: absolute;
+  overflow: hidden;
+  top: -80%;
+  bottom: -20%;
+  left: -20%;
+  width: 150%;
+  height: 150%;
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+}
+@media (min-width: 600px) {
+  .movie__poster--fill {
+    top: -20%;
+    width: 100%;
+  }
+}
+.movie__poster--fill img {
+  -webkit-filter: blur(6px);
+          filter: blur(6px);
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+.movie__poster--featured {
+  position: relative;
+  align-self: center;
+  overflow: hidden;
+  margin-top: 84px;
+  margin-left: 24px;
+  width: 140px;
+  background-color: gainsboro;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.6) 0 6px 12px -6px;
+  z-index: 1;
+}
+@media (min-width: 600px) {
+  .movie__poster--featured {
+    left: 56px;
+    margin: auto;
+  }
+}
+.movie__poster--featured img {
+  width: 140px;
+  vertical-align: middle;
+}
+.movie__poster--featured img[src="N/A"] {
+  min-height: 206px;
+  opacity: 0;
+}
+.movie__details {
+  -webkit-box-flex: 1;
+          flex: 1;
+  padding: 24px;
+}
+@media (min-width: 600px) {
+  .movie__details {
+    padding: 72px;
+  }
+}
+.movie__title {
+  font-family: "Lato", sans-serif;
+  font-size: 2em;
+}
+.movie__no-results {
+  align-self: center;
+  justify-self: center;
+  width: 100%;
+  text-align: center;
+}
+    </style>
+</head>
+<body>
+    <header>
+        
+        <ul>
+          <li><a href="./">Home</a></li>
+          <li><a href="#">Browse Movies</a></li>
+          <li><a href="./categories.html">Genre</a></li>
+          <li><a href="./recommend.html">Recommend</a></li>
+          <li><a href="#">Portfolio</a></li>
+        </ul>
+         
+
+    </header>
+    <div class="movie" id="movie-card">
+        <div class="movie__data" id="movie-data"></div>
+        <input class="movie__search" id="movie-search" type="text" placeholder="Enter a movie title"/>
+      </div>
+      <script>
+          const movieData = document.getElementById('movie-data');
+const input = document.getElementById('movie-search');
+const key = '2fb7569a';
+const defaultTitle = 'dead+poets+society';
+const url = `https://www.omdbapi.com/?apikey=${key}&t=`;
+
+const movieDataTpl = (movie) => {
+  let actors = movie.Actors.split(',');
+  
+  return `
+    <div class="movie__poster">
+      <span class="movie__poster--fill">
+        <img src="${movie.Poster}" />
+      </span>
+      <span class="movie__poster--featured">
+        <img src="${movie.Poster}" />
+      </span>
+    </div>
+    <div class="movie__details">
+      <h2 class="movie__title">${movie.Title}</h2>
+      <ul class="movie__tags list--inline">
+        <li class="movie__rated">${movie.Rated}</li>
+        <li class="movie__year">${movie.Year}</li>
+        <li class="movie__year">${movie.Genre}</li>
+      </ul>
+      <p class="movie__plot">${movie.Plot}</p>
+      <div class="movie__credits">
+        <p><strong>Written by:</strong> ${movie.Writer}</p>
+        <p><strong>Directed by:</strong> ${movie.Director}</p>
+        <p><strong>Starring:</strong></p>
+        <ul class="movie__actors list--inline">
+          ${actors.map(actor => `<li>${actor}</li>`).join('')}
+        </ul>
+      </div>
+    </div>
+  `;
+};
+
+const noResultsTpl = () => {
+  return `
+    <div class="movie__no-results">
+      <h2>No results</div>
+    </div>
+  `;
+};
+
+const findMovie = (title) =>  {
+  fetch(url + title, {
+    method: 'get',
+  }).then(function(res) {
+    return res.json();
+  }).then(function(data) {
+    movieData.innerHTML = movieDataTpl(data);
+  }).catch(function(err) {
+    movieData.innerHTML = noResultsTpl();
+  });
+}
+
+findMovie(defaultTitle);
+
+input.addEventListener('keypress', (e) => {
+  if (e.keyCode === 13 && input.value) findMovie(input.value);
+});
+      </script>
+</body>
+</html>

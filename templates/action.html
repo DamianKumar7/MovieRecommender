@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./css/action.css" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+ 
+  <title>Action</title>
+  <style>
+    
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+body{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 100;
+	font-size: 62.5%;
+    font-size: 20px;
+	line-height: 1.7;
+	color: #fff;
+    background-color: #1f2029;
+    margin: 0;
+    padding: 0;
+    overflow-x: none;
+}
+.container{
+    background-color: #1f2029;
+    font-family: 'Poppins',sans-serif;
+}
+/*Navbar Starts*/
+
+
+.nav {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    line-height: 65px;
+    text-align: center;
+    background-color: #1f2029;
+    z-index: 900;
+    box-shadow: 5px , 10px rgba(0, 0, 0, 0.18);
+}
+
+.nav div.logo {
+    float: left;
+    width: auto;
+    height: auto;
+    padding-left: 3rem;
+}
+
+.nav div.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.nav div.logo a:hover {
+    color: #00E676;
+}
+
+.nav div.main_list {
+    height: 65px;
+    float: right;
+}
+
+.nav div.main_list ul {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav div.main_list ul li {
+    font-size: 5px;
+    width: auto;
+    height: 65px;
+    padding: 0;
+    padding-right: 3rem;
+}
+
+.nav div.main_list ul li a {
+    text-decoration: none;
+    color: #fff;
+    line-height: 65px;
+    font-size: 20px;
+}
+
+.nav div.main_list ul li a:hover {
+    color: #00E676;
+}
+/*Navbar Ends*/
+/*cover photo*/
+.cover{
+  justify-content: center;
+   
+  width: 100%;
+  
+  
+}
+
+#cover_photo{
+  width: 100%;
+}
+/*end of cover*/
+
+.Text{
+    display : flex;
+    font-family: 'Poppins', sans-serif;
+    justify-content: center;
+    font-size: 100%;
+    padding-top: 3%;
+}
+/*cards*/
+a {
+    text-decoration: none;
+  }
+  
+  h1 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+  }
+  
+  .row {
+    
+    margin: 50px auto 0;
+  }
+  
+  .card {
+    float: left;
+    padding: 0 1.7rem;
+    width: 50%;
+  }
+  .card .menu-content {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  .card .menu-content::before, .card .menu-content::after {
+    content: '';
+    display: table;
+  }
+  .card .menu-content::after {
+    clear: both;
+  }
+  .card .menu-content li {
+    display: inline-block;
+  }
+  .card .menu-content a {
+    color: #fff;
+  }
+  .card .menu-content span {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    font-size: 10px;
+    font-weight: 700;
+    font-family: 'Open Sans';
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+  .card .wrapper {
+    background-color: #fff;
+    min-height: 540px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+  }
+  .card .wrapper:hover .data {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .card .data {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    -webkit-transform: translateY(calc(70px + 1em));
+            transform: translateY(calc(70px + 1em));
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+  }
+  .card .data .content {
+    padding: 1em;
+    position: relative;
+    z-index: 1;
+  }
+  .card .author {
+    font-size: 12px;
+  }
+  .card .title {
+    margin-top: 10px;
+  }
+  .card .text {
+    height: 70px;
+    margin: 0;
+  }
+  .card input[type='checkbox'] {
+    display: none;
+  }
+  .card input[type='checkbox']:checked + .menu-content {
+    -webkit-transform: translateY(-60px);
+            transform: translateY(-60px);
+  }
+  
+
+  
+  
+ .example-2 .wrapper {
+    background: url(../movie_posters/avengers.jpg) center/cover no-repeat;
+  }
+  #second-card{
+    background: url(../movie_posters/blood_diamond.jpg) center/cover no-repeat;
+  }
+  #third-card{
+    background: url(../movie_posters/dark_knight.jpg) center/cover no-repeat;
+  }
+  #fourth-card{
+    background: url(../movie_posters/dark_knight_rises.jpg) center/cover no-repeat;
+  }
+  #fifth-card{
+    background: url(../movie_posters/fast_and_furious.jpg) center/cover no-repeat;
+  }
+  #sixth-card{
+    background: url(../movie_posters/departed_2.jpg) center/cover no-repeat;
+  }
+  #seventh-card{
+    background: url(../movie_posters/logan_2.jpg) center/cover no-repeat;
+  }
+  #eight-card{
+    background: url(../movie_posters/mission_impossible_1.jpg) center/cover no-repeat;
+  }
+  #ninth-card{
+    background: url(../movie_posters/mad_max.webp) center/cover no-repeat;
+  }
+  .example-2 .wrapper:hover .menu-content span {
+    -webkit-transform: translate(-50%, -10px);
+            transform: translate(-50%, -10px);
+    opacity: 1;
+  }
+  .example-2 .header {
+    color: #fff;
+    padding: 1em;
+  }
+  .example-2 .header::before, .example-2 .header::after {
+    content: '';
+    display: table;
+  }
+  .example-2 .header::after {
+    clear: both;
+  }
+  .example-2 .header .date {
+    float: left;
+    font-size: 12px;
+  }
+  .example-2 .menu-content {
+    float: right;
+  }
+  .example-2 .menu-content li {
+    margin: 0 5px;
+    position: relative;
+  }
+  .example-2 .menu-content span {
+    transition: all 0.3s;
+    opacity: 0;
+  }
+  .example-2 .data {
+    color: #fff;
+    -webkit-transform: translateY(calc(70px + 4em));
+            transform: translateY(calc(70px + 4em));
+  }
+  .example-2 .title a {
+    color: #fff;
+  }
+  .example-2 .button {
+    display: block;
+    width: 100px;
+    margin: 2em auto 1em;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    line-height: 1;
+    position: relative;
+    font-weight: 700;
+  }
+  .example-2 .button::after {
+    content: '\2192';
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    transition: all 0.3s;
+  }
+  .example-2 .button:hover::after {
+    -webkit-transform: translate(5px, -50%);
+            transform: translate(5px, -50%);
+    opacity: 1;
+  }
+
+  .row {
+      display: flex;
+  }
+  /*footer*/
+  footer {
+    padding-top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    background: #1f2029;
+  }
+  .con-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    padding-bottom: 50px;
+  }
+  
+  
+  .con-social-btns {
+    padding-left: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  button {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0px;
+    color: #fff;
+    cursor: pointer;
+    background: transparent;
+    position: relative;
+    transition: all .25s ease;
+    /* margin-left: -12px;
+    margin-right: -12px; */
+  }
+  button:active {
+    transform: scale(.85);
+  }
+  .bg {
+    position: absolute;
+    width: 60px;
+    background: rgb(65, 53, 214);
+    height: 60px;
+    border-radius: 25px;
+    pointer-events: none;
+    box-shadow: 0px 8px 35px 0px rgba(65, 53, 214, .25);
+  }
+  button i {
+    pointer-events: none;
+    font-size: 1.8rem;
+    z-index: 10;
+    position: relative;
+  }
+  
+  button a{
+    color: #fff;
+  }
+  button a:visited{
+    color: #fff;
+  
+  }
+  #Back{
+    color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+  }
+  </style>
+</head>
+<body>
+    <div class = 'container'>
+      <nav class="nav">
+        <div class="logo">
+          <a href="#">Your Logo</a>
+        </div>
+        <div id="mainListDiv" class="main_list">
+          <ul class="navlinks">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact</a></li>
+          </ul>
+        
+        <span class="navTrigger">
+          <i></i>
+          <i></i>
+          <i></i> 
+        </span>
+      </nav>
+    </div>
+    <div class = "cover">
+      <img src="./movie_posters/john_wick_cover1.png" id = "cover_photo">
+    </div>
+  
+    
+    <div class = "Text">
+      <h1>
+        Our Picks
+      </h1>
+    </div>
+    <div class="row">
+      <div class="example-2 card">
+        <div class="wrapper" >
+          <div class="header">
+            <div class="date">
+              <span class="day">12</span>
+              <span class="month">Aug</span>
+              <span class="year">2016</span>
+            </div>
+            <ul class="menu-content">
+              <li>
+                <a href="#" class="fa fa-bookmark-o"></a>
+              </li>
+              <li><a href="#" class="fa fa-heart-o"><span>18</span></a></li>
+              <li><a href="#" class="fa fa-comment-o"><span>3</span></a></li>
+            </ul>
+          </div>
+          <div class="data">
+            <div class="content">
+              <span class="author">Jane Doe</span>
+              <h1 class="title" style="font-size: 
+              50px;"><a href="#">The Avengers</a></h1>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="example-2 card">
+        <div class="wrapper" id = "second-card" >
+          <div class="header">
+            <div class="date">
+              <span class="day">12</span>
+              <span class="month">Aug</span>
+              <span class="year">2016</span>
+            </div>
+            <ul class="menu-content">
+              <li>
+                <a href="#" class="fa fa-bookmark-o"></a>
+              </li>
+              <li><a href="#" class="fa fa-heart-o"><span>18</span></a></li>
+              <li><a href="#" class="fa fa-comment-o"><span>3</span></a></li>
+            </ul>
+          </div>
+          <div class="data">
+            <div class="content">
+              <span class="author">Jane Doe</span>
+              <h1 class="title"><a href="#">Blood Diamond</a></h1>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="example-2 card">
+        <div class="wrapper" id = "third-card" >
+          <div class="header">
+            <div class="date">
+              <span class="day">12</span>
+              <span class="month">Aug</span>
+              <span class="year">2016</span>
+            </div>
+            <ul class="menu-content">
+              <li>
+                <a href="#" class="fa fa-bookmark-o"></a>
+              </li>
+              <li><a href="#" class="fa fa-heart-o"><span>18</span></a></li>
+              <li><a href="#" class="fa fa-comment-o"><span>3</span></a></li>
+            </ul>
+          </div>
+          <div class="data">
+            <div class="content">
+              <span class="author">Jane Doe</span>
+              <h1 class="title"><a href="#">The Dark Knight</a></h1>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="example-2 card">
+        <div class="wrapper" id = "fourth-card">
+          <div class="header">
+            <div class="date">
+              <span class="day">12</span>
+              <span class="month">Aug</span>
+              <span class="year">2016</span>
+            </div>
+            <ul class="menu-content">
+              <li>
+                <a href="#" class="fa fa-bookmark-o"></a>
+              </li>
+              <li><a href="#" class="fa fa-heart-o"><span>18</span></a></li>
+              <li><a href="#" class="fa fa-comment-o"><span>3</span></a></li>
+            </ul>
+          </div>
+          <div class="data">
+            <div class="content">
+              <span class="author">Jane Doe</span>
+              <h1 class="title"><a href="#">The Dark Knight Rises</a></h1>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="example-2 card">
+        <div class="wrapper" id = "fifth-card" >
+          <div class="header">
+            <div class="date">
+              <span class="day">12</span>
+              <span class="month">Aug</span>
+              <span class="year">2016</span>
+            </div>
+            <ul class="menu-content">
+              <li>
+                <a href="#" class="fa fa-bookmark-o"></a>
+              </li>
+              <li><a href="#" class="fa fa-heart-o"><span>18</span></a></li>
+              <li><a href="#" class="fa fa-comment-o"><span>3</span></a></li>
+            </ul>
+          </div>
+          <div class="data">
+            <div class="content">
+              <span class="author">Jane Doe</span>
+              <h1 class="title"><a href="#">Fast and Furious </a></h1>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="example-2 card">
+        <div class="wrapper" id = "sixth-card" >
+          <div class="header">
+            <div class="date">
+              <span class="day">12</span>
+              <span class="month">Aug</span>
+              <span class="year">2016</span>
+            </div>
+            <ul class="menu-content">
+              <li>
+                <a href="#" class="fa fa-bookmark-o"></a>
+              </li>
+              <li><a href="#" class="fa fa-heart-o"><span>18</span></a></li>
+              <li><a href="#" class="fa fa-comment-o"><span>3</span></a></li>
+            </ul>
+          </div>
+          <div class="data">
+            <div class="content">
+              <span class="author">Jane Doe</span>
+              <h1 class="title"><a href="#">The Departed</a></h1>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+       <div class="row">
+      <div class="example-2 card">
+        <div class="wrapper" id = "seventh-card">
+          <div class="header">
+            <div class="date">
+              <span class="day">12</span>
+              <span class="month">Aug</span>
+              <span class="year">2016</span>
+            </div>
+            <ul class="menu-content">
+              <li>
+                <a href="#" class="fa fa-bookmark-o"></a>
+              </li>
+              <li><a href="#" class="fa fa-heart-o"><span>18</span></a></li>
+              <li><a href="#" class="fa fa-comment-o"><span>3</span></a></li>
+            </ul>
+          </div>
+          <div class="data">
+            <div class="content">
+              <span class="author">Jane Doe</span>
+              <h1 class="title"><a href="#">Logan</a></h1>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="example-2 card">
+        <div class="wrapper" id = "eight-card" >
+          <div class="header">
+            <div class="date">
+              <span class="day">12</span>
+              <span class="month">Aug</span>
+              <span class="year">2016</span>
+            </div>
+            <ul class="menu-content">
+              <li>
+                <a href="#" class="fa fa-bookmark-o"></a>
+              </li>
+              <li><a href="#" class="fa fa-heart-o"><span>18</span></a></li>
+              <li><a href="#" class="fa fa-comment-o"><span>3</span></a></li>
+            </ul>
+          </div>
+          <div class="data">
+            <div class="content">
+              <span class="author">Jane Doe</span>
+              <h1 class="title"><a href="#">Mission: Impossible</a></h1>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="example-2 card">
+        <div class="wrapper" id = "ninth-card" >
+          <div class="header">
+            <div class="date">
+              <span class="day">12</span>
+              <span class="month">Aug</span>
+              <span class="year">2016</span>
+            </div>
+            <ul class="menu-content">
+              <li>
+                <a href="#" class="fa fa-bookmark-o"></a>
+              </li>
+              <li><a href="#" class="fa fa-heart-o"><span>18</span></a></li>
+              <li><a href="#" class="fa fa-comment-o"><span>3</span></a></li>
+            </ul>
+          </div>
+          <div class="data">
+            <div class="content">
+              <span class="author">Jane Doe</span>
+              <h1 class="title"><a href="#">Mad Max:Fury Road</a></h1>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <h2><a href="./" id = "Back">Back To Home</a></h2>
+    <div class="con-footer">
+        <div class="con-social-btns">
+            <button>
+                <a href="https://www.instagram.com/artist_of_the_damned/"><i class = "bx bxl-instagram-alt" ></i></a>
+                <div class="bg"></div>
+            </button>
+            <button>
+                <a href="https://discord.com/channels/@me"><i class = "bx bxl-discord" ></i></a>
+                <div class="bg"></div>
+            </button>
+            <button>
+               <a href="https://stackoverflow.com/questions/26814297/want-to-make-font-awesome-icons-clickable"> <i class = "bx bxl-github" ></i></a>
+                <div class="bg"></div>
+            </button>
+
+        </div>
+
+    </div>
+</footer>
+<script src="./js/thriller.js"></script>
+<script>
+  const btns = document.querySelectorAll('.con-social-btns button')
+
+btns.forEach((item) => {
+    item.addEventListener('mousemove', (evt) => {
+        const x = evt.layerX - 60
+        const y = evt.layerY - 60
+        const bg = evt.target.querySelector('.bg')
+        const i = evt.target.querySelector('i.bx')
+        bg.style.transform = `translate(${x / 8}px, ${y / 8}px)`
+        i.style.transform = `translate(${x / 4}px, ${y / 4}px)`
+    })
+
+    item.addEventListener('mouseenter', (evt) => {
+        const bg = evt.target.querySelector('.bg')
+        const i = evt.target.querySelector('i.bx')
+        bg.style.transition = 'all .15s ease'
+        i.style.transition = 'all .15s ease'
+        setTimeout(() => {
+            bg.style.transition = ''
+            i.style.transition = ''
+        }, 150);
+    })
+
+    item.addEventListener('mouseleave', (evt) => {
+        const bg = evt.target.querySelector('.bg')
+        const i = evt.target.querySelector('i.bx')
+        bg.style.transition = 'all .25s ease'
+        i.style.transition = 'all .25s ease'
+        bg.style.transform = `translate(${0}px, ${0}px)`
+        i.style.transform = `translate(${0}px, ${0}px)`
+
+        setTimeout(() => {
+            bg.style.transition = ''
+            i.style.transition = ''
+        }, 250);
+    })
+})
+</script>
+<script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
+    
+  
+</body>
+</html>
